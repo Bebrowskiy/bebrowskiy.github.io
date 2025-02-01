@@ -1,42 +1,95 @@
+/* Основные стили для страницы */
 body {
-    background: linear-gradient(135deg, #0a0a0a, #1a001a);
-    color: #dcdcdc;
-    font-family: 'JetBrains Mono', monospace;
-    text-align: center;
+    background: linear-gradient(135deg, #0a0a0a, #1a001a); /* Темный градиентный фон */
+    color: #dcdcdc; /* Цвет текста */
+    font-family: 'JetBrains Mono', monospace; /* Шрифт моноширинный */
+    text-align: center; /* Выравнивание текста по центру */
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 100vh; /* Высота экрана */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    overflow: hidden; /* Прячем лишнее содержимое */
 }
+
+/* Контейнер для текста и элементов на странице */
 .container {
     position: relative;
     z-index: 2;
+    display: flex;
+    flex-direction: column; /* Выравнивание по вертикали */
+    align-items: center; /* Центрирование по горизонтали */
+    justify-content: center; /* Центрирование по вертикали */
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 20px; /* Отступы внутри контейнера */
 }
-h1 {
-    color: #9400d3;
-}
+
+/* Описание текста */
 p {
-    max-width: 600px;
-    font-size: 18px;
+    max-width: 600px; /* Максимальная ширина текста */
+    font-size: 18px; /* Размер шрифта */
 }
-/* Анимированный фон */
-.background {
+
+/* Стили для слоев фона */
+.background-layer {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(148,0,211,0.2) 10%, transparent 70%);
-    animation: moveBackground 10s infinite alternate;
+    background: radial-gradient(circle, rgba(148, 0, 211, 0.3) 10%, transparent 70%); /* Фон с радужным градиентом */
+    animation: moveBackground 15s infinite alternate; /* Анимация фона */
 }
+
+/* Настройка второго слоя фона */
+.background-layer:nth-child(2) {
+    background: radial-gradient(circle, rgba(255, 20, 147, 0.2) 10%, transparent 70%);
+    animation-duration: 20s; /* Более плавное движение второго слоя */
+}
+
+/* Настройка третьего слоя фона */
+.background-layer:nth-child(3) {
+    background: radial-gradient(circle, rgba(255, 105, 180, 0.2) 10%, transparent 70%);
+    animation-duration: 25s; /* Третий слой с ещё более медленной анимацией */
+}
+
+/* Анимация для фонов */
 @keyframes moveBackground {
     from {
-        transform: translateX(-10%) translateY(-10%);
+        transform: translateX(-15%) translateY(-15%); /* Начальное положение */
     }
     to {
-        transform: translateX(10%) translateY(10%);
+        transform: translateX(15%) translateY(15%); /* Конечное положение */
     }
+}
+
+/* Эффект "глитча" для заголовка */
+@keyframes glitch {
+    0% {
+        text-shadow: 1px 0 red, -1px 0 blue; /* Эффект "сдвига" */
+    }
+    20% {
+        text-shadow: -1px 0 red, 1px 0 blue;
+    }
+    40% {
+        text-shadow: 2px 0 green, -2px 0 purple;
+    }
+    60% {
+        text-shadow: -2px 0 green, 2px 0 purple;
+    }
+    80% {
+        text-shadow: 1px 0 red, -1px 0 blue;
+    }
+    100% {
+        text-shadow: 1px 0 #9400d3, -1px 0 #9400d3; /* Финальный эффект с фиолетовым светом */
+    }
+}
+
+/* Заголовок с анимацией "глитча" */
+h1 {
+    font-size: 3rem; /* Размер шрифта */
+    animation: glitch 1.5s infinite; /* Запуск анимации */
+    color: #fff; /* Цвет текста */
+    font-family: 'JetBrains Mono', monospace; /* Шрифт */
 }
