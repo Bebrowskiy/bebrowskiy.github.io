@@ -93,3 +93,7 @@ h1 {
     color: #fff; /* Цвет текста */
     font-family: 'JetBrains Mono', monospace; /* Шрифт */
 }
+
+strong {
+    font-family: 'Audiowide', monospace;
+}
