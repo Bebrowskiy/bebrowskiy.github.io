@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     trigger.addEventListener("click", function () {
         setTimeout(() => {
-            alert("tiyniygm, dtyyk xfiehev. jaiccbmnrr aqqq fp ea ny wsscqi fp");
+            alert("eap ri, lrl dty’wp ojy xsi isxapv...");
         });
     });
 });
