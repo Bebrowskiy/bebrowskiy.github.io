@@ -1,0 +1,69 @@
+body {
+    background: linear-gradient(135deg, #0a0a0a, #1a001a);
+    color: #dcdcdc;
+    background:  #111;
+    font-family: Arial, sans-serif;
+    text-align: center; 
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden;
+}
+
+
+.container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; /* Центрирование по вертикали */
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 20px; /* Отступы внутри контейнера */
+}
+
+/* Описание текста */
+p {
+    max-width: 600px; /* Максимальная ширина текста */
+    font-size: 18px; /* Размер шрифта */
+}
+
+
+@keyframes glitch {
+    0% {
+        text-shadow: 1px 0 red, -1px 0 blue; /* Эффект "сдвига" */
+    }
+    20% {
+        text-shadow: -1px 0 red, 1px 0 blue;
+    }
+    40% {
+        text-shadow: 2px 0 green, -2px 0 purple;
+    }
+    60% {
+        text-shadow: -2px 0 green, 2px 0 purple;
+    }
+    80% {
+        text-shadow: 1px 0 red, -1px 0 blue;
+    }
+    100% {
+        text-shadow: 1px 0 #9400d3, -1px 0 #9400d3; /* Финальный эффект с фиолетовым светом */
+    }
+}
+
+h1 {
+    font-size: 3rem; /* Размер шрифта */
+    animation: glitch 1.5s infinite; /* Запуск анимации */
+    color: #fff; /* Цвет текста */
+    font-family: 'JetBrains Mono', monospace; /* Шрифт */
+}
+
+.container {
+    max-width: 600px;
+}
+
+#creatorName {
+    cursor: pointer;
+}

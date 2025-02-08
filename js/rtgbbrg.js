@@ -10,13 +10,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const clueElement = document.querySelector('h1');
 
     setInterval(function() {
-        // Ожидание до смены подсказки
+        
         currentClue = (currentClue + 1) % clues.length;
         clueElement.textContent = clues[currentClue];
 
-        // Перезапуск анимации
+
         clueElement.classList.remove('glitch');
-        void clueElement.offsetWidth; // Этот трюк принудительно перезапустит анимацию
+        void clueElement.offsetWidth;
         clueElement.classList.add('glitch');
-    }, 5000);  // Меняет подсказку каждые 5 секунд
+    }, 5000); 
 });
+
+
+let secret = String.fromCharCode(55, 50, 57, 53, 44, 32, 52, 55, 48, 49);
+console.log(secret);
