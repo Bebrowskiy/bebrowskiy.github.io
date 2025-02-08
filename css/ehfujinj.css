@@ -26,7 +26,7 @@ body {
 }
 
 /* Описание текста */
-p {
+a {
     max-width: 600px; /* Максимальная ширина текста */
     font-size: 18px; /* Размер шрифта */
 }
@@ -66,4 +66,9 @@ h1 {
 
 #creatorName {
     cursor: pointer;
+}
+
+.lovalova {
+    font-size: 1.5rem;
+    font-family: 'Audiowide', monospace;
 }
