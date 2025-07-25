@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IQ Test Instead of Captcha</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="language-selector">
+      <button class="lang-btn active" data-lang="ru">RU</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    
+    <header>
+      <h1 id="quiz-title">🧠 IQ Test Instead of Captcha</h1>
+      <p id="quiz-subtitle">Пройдите тест, чтобы доказать, что вы не робот... или почти не робот.</p>
+    </header>
+
+    <main id="quiz-container">
+      <div id="question-number">Вопрос 1 из 10</div>
+      <h2 id="question-text">Здесь будет вопрос</h2>
+      <div id="image-container"></div>
+      <div id="options-container">
+        <!-- Варианты ответов будут подставляться сюда скриптом -->
+      </div>
+      <button id="next-button" disabled>Далее</button>
+    </main>
+
+    <footer>
+      <p id="quiz-footer">© 2025 Your Name. Этот сайт проверит ваш IQ... или сломает его.</p>
+    </footer>
+  </div>
+
+  <script type="module">
+    // Импортируем переводы и основной скрипт
+    import translations from './js/languages.js';
+    import { IQQuiz } from './js/quiz.js';
+    
+    // Получаем язык из URL параметров
+    const urlParams = new URLSearchParams(window.location.search);
+    let currentLang = urlParams.get('lang') || 'ru';
+    let currentQuiz = null;
+    
+    // Функция для перевода текста
+    function t(key) {
+      return translations[currentLang][key] || key;
+    }
+    
+    // Функция для обновления всех текстов на странице
+    function updateLanguage() {
+      document.getElementById('quiz-title').textContent = t('title');
+      document.getElementById('quiz-subtitle').textContent = t('subtitle');
+      document.getElementById('quiz-footer').textContent = t('footer');
+      document.getElementById('next-button').textContent = t('next');
+      
+      // Обновляем активную кнопку языка
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.lang === currentLang) {
+          btn.classList.add('active');
+        }
+      });
+      
+      // Обновляем язык в основном скрипте теста
+      if (currentQuiz) {
+        currentQuiz.updateLanguage(currentLang);
+      }
+    }
+    
+    // Добавляем обработчики для кнопок языков
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentLang = btn.dataset.lang;
+        updateLanguage();
+        // Обновляем URL без перезагрузки страницы
+        const url = new URL(window.location);
+        url.searchParams.set('lang', currentLang);
+        window.history.replaceState({}, '', url);
+      });
+    });
+    
+    // Инициализируем тест с текущим языком
+    updateLanguage();
+    currentQuiz = new IQQuiz(currentLang);
+  </script>
+</body>
+</html>
