@@ -73,7 +73,7 @@ const translations = {
     question: "Question",
     of: "of",
     next: "Next",
-    footer: "© 2025 Your Name. This site will test your IQ... or break it.",
+    footer: "© 2025 bebrowskiy. This site will test your IQ... or break it.",
     startButton: "🧠 Take IQ Test",
     why: "Why is this happening?",
     whyText: "The system detected suspicious activity from your IP address. Take a short test to prove you're not a robot.",
@@ -87,7 +87,7 @@ const translations = {
     yourScore: "Your IQ:",
     shareResult: "📤 Share Result",
     tryAgain: "🔄 Try Again",
-    copyright: "© 2025 Your Name. Thank you for taking the test!",
+    copyright: "© 2025 bebrowskiy. Thank you for taking the test!",
     
     // Grades
     genius: "🧠 You're an intellectual giant!",
