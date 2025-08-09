@@ -1,11 +1,260 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en"> <!-- This will be updated by JS -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>I dont know...</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Bebrowskiy, a versatile Python developer specializing in web applications, data analysis, automation, and security tools." data-i18n="[content]meta.description">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bebrowskiy.github.io/">
+    <meta property="og:title" content="bebrowskiy | Python Developer & Tech Swiss Army Knife" data-i18n="[content]og.title">
+    <meta property="og:description" content="Portfolio of Bebrowskiy, a versatile Python developer specializing in web applications, data analysis, automation, and security tools." data-i18n="[content]og.description">
+    <meta property="og:image" content="https://bebrowskiy.github.io/assets/favicons/icon.png">
+    <meta property="og:image:alt" content="Bebrowskiy's Portfolio Website" data-i18n="[content]og.image_alt">
+    <title>Bread</title> <!-- Default title -->
+
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#c5b3e6">
+    <meta name="msapplication-TileImage" content="assets/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#e0d6f0">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <h1>Butter</h1>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="themeToggle">🌙</div>
+
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ru">RU</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="particles" id="particles"></div>
+        <div class="container hero-content">
+            <h1 data-i18n="hero.title" data-i18n-html="true"></h1>
+            <p data-i18n="hero.subtitle"></p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about-content">
+            <h2 data-i18n="about.title"></h2>
+            
+            <p data-i18n="about.text1"></p>
+            <p data-i18n="about.text2"></p>
+            <p data-i18n="about.text3"></p>
+            <p data-i18n="about.text4"></p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 data-i18n="skills.title"></h2>
+            
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-icon">🐍</div>
+                    <div class="skill-name" data-i18n="skills.python"></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">📡</div>
+                    <div class="skill-name" data-i18n="skills.api"></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">🌐</div>
+                    <div class="skill-name" data-i18n="skills.flask_django"></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">📊</div>
+                    <div class="skill-name" data-i18n="skills.data_science"></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">💾</div>
+                    <div class="skill-name" data-i18n="skills.sql_nosql"></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">💻</div>
+                    <div class="skill-name" data-i18n="skills.html_css"></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">⚙️</div>
+                    <div class="skill-name" data-i18n="skills.javascript"></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">👾</div>
+                    <div class="skill-name" data-i18n="skills.bots"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <h2 data-i18n="stats.title"></h2>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="0">0</div>
+                    <div class="stat-label" data-i18n="stats.errors"></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="5">5</div>
+                    <div class="stat-label" data-i18n="stats.years_experience"></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="200">127</div>
+                    <div class="stat-label" data-i18n="stats.coffee_cups"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terminal Section -->
+    <section class="terminal-section" id="terminal">
+        <div class="container">
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-button red"></div>
+                    <div class="terminal-button yellow"></div>
+                    <div class="terminal-button green"></div>
+                    <div class="terminal-title">bebrowskiy@portfolio: ~</div>
+                </div>
+                <div class="terminal-content">
+                    <div><span class="terminal-prompt">bebrowskiy@portfolio:~$</span> <span class="terminal-command">python --version</span></div>
+                    <div class="terminal-output">Python 3.13.5</div>
+                    <div><span class="terminal-prompt">bebrowskiy@portfolio:~$</span> <span class="terminal-command">> ls ~/projects | wc -l</span></div>
+                    <div class="terminal-output">52</div>
+                    <div><span class="terminal-prompt">bebrowskiy@portfolio:~$</span> <span class="terminal-command">cat about_me.txt</span></div>
+                    <div class="terminal-output" data-i18n="terminal.about_me"></div>
+                    <div><span class="terminal-prompt">bebrowskiy@portfolio:~$</span> <span class="terminal-command">echo "I use Arch btw :D"</span></div>
+                    <div class="terminal-output">I use Arch btw :D</div>
+                    <div><span class="terminal-prompt">bebrowskiy@portfolio:~$</span> <span class="terminal-command">_</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 data-i18n="projects.title"></h2>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-github="https://github.com/Bebrowskiy/GithubGuardian-Scanner">
+                    <div class="project-image-wrapper">
+                        <img src="assets/github-scanner.png" alt="GitHub Scanner Image", class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-i18n="projects.github_guardion.title"></h3>
+                        <p class="project-description" data-i18n="projects.github_guardion.description"></p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Security</span>
+                            <span class="project-tag">Automation</span>
+                            <span class="project-tag">OSINT</span>
+                        </div>
+                        <a href="https://github.com/Bebrowskiy/GithubGuardian-Scanner" class="github-link" data-i18n="projects.view_github" target="_blank"></a>
+                    </div>
+                </div>
+                <div class="project-card" data-github="https://github.com/Bebrowskiy/house-price-predictor">
+                    <div class="project-image-wrapper">
+                        <img src="assets/house-price.png" alt="", class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-i18n="projects.house_price.title"></h3>
+                        <p class="project-description" data-i18n="projects.house_price.description"></p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Machine Learning</span>
+                            <span class="project-tag">Flask</span>
+                            <span class="project-tag">Data Science</span>
+                        </div>
+                        <a href="https://github.com/Bebrowskiy/house-price-predictor" class="github-link" data-i18n="projects.view_github" target="_blank"></a>
+                    </div>
+                </div>
+                <div class="project-card" data-github="https://github.com/Bebrowskiy/CyberEcho">
+                    <div class="project-image-wrapper">
+                        <img src="assets/cyber_echo.png" alt="GitHub Scanner Image" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-i18n="projects.cyber_echo.title"></h3>
+                        <p class="project-description" data-i18n="projects.cyber_echo.description"></p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">AI</span>
+                            <span class="project-tag">Voice Recognition</span>
+                            <span class="project-tag">Automation</span>
+                        </div>
+                        <a href="https://github.com/Bebrowskiy/CyberEcho" class="github-link" data-i18n="projects.view_github" target="_blank"></a>
+                    </div>
+                </div>
+                <div class="project-card" data-github="https://github.com/Bebrowskiy/Sniffle">
+                    <div class="project-image-wrapper">
+                        <img src="assets/sniffle.png" alt="", class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" data-i18n="projects.sniffle.title"></h3>
+                        <p class="project-description" data-i18n="projects.sniffle.description"></p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">OSINT</span>
+                            <span class="project-tag">Data Mining</span>
+                            <span class="project-tag">Automation</span>
+                        </div>
+                        <a href="https://github.com/Bebrowskiy/Sniffle" class="github-link" data-i18n="projects.view_github" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 data-i18n="contact.title"></h2>
+            <p data-i18n="contact.text"></p>
+            
+            <div class="contact-links">
+                <a href="mailto:bebrow2021@vk.com" class="contact-link">
+                    <div class="contact-icon">📬</div>
+                    <span>Email</span>
+                </a>
+                <a href="https://github.com/bebrowskiy" class="contact-link" target="_blank">
+                    <div class="contact-icon">🐙</div>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Scripts -->
+    <script src="js/particles.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
 </body>
 </html>
